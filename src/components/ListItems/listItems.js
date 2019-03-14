@@ -4,11 +4,11 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import HomeIcon from '@material-ui/icons/Home'
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import PeopleIcon from '@material-ui/icons/People'
 import BarChartIcon from '@material-ui/icons/BarChart'
 import LayersIcon from '@material-ui/icons/Layers'
 import AssignmentIcon from '@material-ui/icons/Assignment'
+import TimelineIcon from '@material-ui/icons/Timeline'
 import { Link } from 'react-router-dom'
 
 export const mainListItems = (
@@ -30,23 +30,27 @@ export const mainListItems = (
     <Link to='/table'>
       <ListItem button>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary='Orders' />
+        <ListItemText primary='DataTable' />
       </ListItem>
     </Link>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary='Reports' />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary='Integrations' />
-    </ListItem>
+    <Link to='/linechart'>
+      <ListItem button>
+        <ListItemIcon>
+          <BarChartIcon />
+        </ListItemIcon>
+        <ListItemText primary='Reports' />
+      </ListItem>
+    </Link>
+    <Link to='/timeLine'>
+      <ListItem button>
+        <ListItemIcon>
+          <TimelineIcon />
+        </ListItemIcon>
+        <ListItemText primary='TimeLine' />
+      </ListItem>
+    </Link>
   </div>
 )
 

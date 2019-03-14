@@ -1,0 +1,45 @@
+.imgError {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+p.notFoundDesc {
+  font-size: 20px;
+}
+
+h1.notFoundTitle {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 360px) {
+  p.notFoundDesc {
+    font-size: 15px;
+  }
+
+  h1.notFoundTitle {
+    font-size: 15px;
+    padding-top: 37px;
+  }
+  .imgError {
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 42px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  p.notFoundDesc {
+    font-size: 15px;
+  }
+
+  h1.notFoundTitle {
+    font-size: 15px;
+    padding-top: 37px;
+  }
+  .imgError {
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 42px;
+  }
+}

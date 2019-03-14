@@ -14,7 +14,7 @@ import Badge from '@material-ui/core/Badge'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import { mainListItems, secondaryListItems } from '../ListItems/listItems'
-// import SimpleLineChart from '../SimpleLineChart/SimpleLineChart'
+import SimpleLineChart from '../SimpleLineChart/SimpleLineChart'
 import SimpleTable from '../SimpleTable/SimpleTable'
 import ListItemText from '@material-ui/core/ListItemText'
 import DashboardIcon from '@material-ui/icons/Dashboard'
@@ -25,6 +25,8 @@ import Login from '../Login/Login'
 import MailIcon from '@material-ui/icons/Mail'
 import SearchIcon from '@material-ui/icons/Search'
 import InputBase from '@material-ui/core/InputBase'
+import ErrorNotFound from '../404/ErrorNotFound'
+import WorkHistory from '../Experiencia/experiencia'
 import { fade } from '@material-ui/core/styles/colorManipulator'
 import './Dash.css'
 
@@ -217,20 +219,25 @@ class Dashboard extends React.Component {
               >
                 <MailIcon />
               </Badge>
+              <div className='searchIcon iconNone'>
+                <SearchIcon />
+              </div>
             </Typography>
             <Avatar />
             <IconButton color='inherit'>
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
+              <div className='noneSearch'>
+                <div className={classes.search}>
+                  <div className={classes.searchIcon}>
+                    <SearchIcon />
+                  </div>
+                  <InputBase
+                    placeholder='Search…'
+                    classes={{
+                      roots: classes.inputRoot,
+                      input: classes.inputInput
+                    }}
+                  />
                 </div>
-                <InputBase
-                  placeholder='Search…'
-                  classes={{
-                    roots: classes.inputRoot,
-                    input: classes.inputInput
-                  }}
-                />
               </div>
             </IconButton>
           </Toolbar>
@@ -263,22 +270,13 @@ class Dashboard extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <Switch>
+            <Route path='/' exact component={Login} />
             <Route path='/login' exact component={Login} />
             <Route path='/table' exact component={SimpleTable} />
+            <Route path='/linechart' exact component={SimpleLineChart} />
+            <Route path='/timeLine' exact component={WorkHistory} />
+            <Route component={ErrorNotFound} />
           </Switch>
-          {/* <div className={classes.appBarSpacer} />
-          <Typography variant='h4' gutterBottom component='h2'>
-            Orders
-          </Typography>
-          <Typography component='div' className={classes.chartContainer}>
-            {/* <SimpleLineChart />
-          </Typography>
-          <Typography variant='h4' gutterBottom component='h2'>
-            Products
-          </Typography>
-          <div className={classes.tableContainer}>
-            <SimpleTable />
-          </div> */}
         </main>
       </div>
     )

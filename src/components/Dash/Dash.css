@@ -1,3 +1,40 @@
 .MuiGrid-container-126.MuiGrid-align-items-xs-center-134.MuiGrid-justify-xs-center-143 {
   width: 35px;
 }
+
+.searchIcon {
+  display: unset;
+}
+
+.iconNone {
+  display: none;
+}
+
+main.Dashboard-content-12 {
+  height: 153vh;
+}
+
+@media screen and (max-width: 320px) {
+  .iconNone {
+    display: inline-block;
+  }
+  main.Dashboard-content-12 {
+    height: 153vh;
+  }
+
+  h1.MuiTypography-root-81.MuiTypography-h6-98.MuiTypography-colorInherit-110.MuiTypography-noWrap-107.Dashboard-title-8 {
+    margin-right: -70px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .iconNone {
+    display: inline-block;
+  }
+  main.Dashboard-content-12 {
+    height: 153vh;
+  }
+  h1.MuiTypography-root-81.MuiTypography-h6-98.MuiTypography-colorInherit-110.MuiTypography-noWrap-107.Dashboard-title-8 {
+    margin-right: -70px;
+  }
+}

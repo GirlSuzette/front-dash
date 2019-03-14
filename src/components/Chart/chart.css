@@ -1,0 +1,18 @@
+.chartBar {
+  width: 71%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 360px) {
+  .chartBar {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .chartBar {
+    width: 86%;
+    margin: 0 auto;
+  }
+}

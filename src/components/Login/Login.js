@@ -122,14 +122,14 @@ class Login extends React.Component {
                       >
                         Login
                       </Button>
-                      <div className='signupContainer'>
-                        <p>
-                          Don't have account yet?
-                          <Link className='signupLink' to='#'>
-                            <br /> Sign up now!
-                          </Link>
-                        </p>
-                      </div>
+                    </div>
+                    <div className='signupContainer'>
+                      <p>
+                        Don't have account yet?
+                        <Link className='signupLink' to='#'>
+                          <br /> Sign up now!
+                        </Link>
+                      </p>
                     </div>
                   </form>
                 </div>

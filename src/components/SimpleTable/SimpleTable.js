@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 const styles = {
   root: {
@@ -37,6 +38,9 @@ function SimpleTable (props) {
 
   return (
     <div className='contaTable'>
+      <Typography variant='h4' gutterBottom component='h2'>
+        Orders
+      </Typography>
       <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
