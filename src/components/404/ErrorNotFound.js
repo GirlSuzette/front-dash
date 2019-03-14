@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import img from '../../image/not_found.gif'
+import { Link } from 'react-router-dom'
+
 import './Erro.css'
 
 export default class ErrorNotFound extends Component {
@@ -12,6 +14,9 @@ export default class ErrorNotFound extends Component {
             It looks like nothing was found at this location. Maybe try one of
             the links in the menu or press back to go to the previous page.
           </p>
+          <Link to='/'>
+            <button class='button button2'>Home Page</button>
+          </Link>
           <div className='imgError'>
             <img src={img} alt='Smiley face' />
           </div>

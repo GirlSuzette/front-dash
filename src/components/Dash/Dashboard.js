@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
+import { mainListItems } from '../ListItems/listItems'
+import { fade } from '@material-ui/core/styles/colorManipulator'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
 import AppBar from '@material-ui/core/AppBar'
@@ -13,7 +15,6 @@ import IconButton from '@material-ui/core/IconButton'
 import Badge from '@material-ui/core/Badge'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import { mainListItems, secondaryListItems } from '../ListItems/listItems'
 import SimpleLineChart from '../SimpleLineChart/SimpleLineChart'
 import SimpleTable from '../SimpleTable/SimpleTable'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -27,7 +28,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import InputBase from '@material-ui/core/InputBase'
 import ErrorNotFound from '../404/ErrorNotFound'
 import WorkHistory from '../Experiencia/experiencia'
-import { fade } from '@material-ui/core/styles/colorManipulator'
+import Home from '../Home/Home'
 import './Dash.css'
 
 import { Switch, Route } from 'react-router-dom'
@@ -257,7 +258,7 @@ class Dashboard extends React.Component {
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
-              <ListItemText primary='Material' />
+              <ListItemText primary='Dashboard' />
             </ListItem>
             <IconButton onClick={this.handleDrawerClose}>
               <ChevronLeftIcon />
@@ -266,11 +267,10 @@ class Dashboard extends React.Component {
           <Divider />
           <List>{mainListItems}</List>
           <Divider />
-          <List>{secondaryListItems}</List>
         </Drawer>
         <main className={classes.content}>
           <Switch>
-            <Route path='/' exact component={Login} />
+            <Route path='/' exact component={Home} />
             <Route path='/login' exact component={Login} />
             <Route path='/table' exact component={SimpleTable} />
             <Route path='/linechart' exact component={SimpleLineChart} />

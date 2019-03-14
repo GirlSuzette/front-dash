@@ -18,6 +18,12 @@ main.Dashboard-content-12 {
   width: 5%;
 }
 
+.Dashboard-toolbarIcon-3 {
+  min-height: 73px;
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+
 @media screen and (max-width: 320px) {
   .iconNone {
     display: inline-block;
@@ -40,5 +46,10 @@ main.Dashboard-content-12 {
   }
   h1.MuiTypography-root-81.MuiTypography-h6-98.MuiTypography-colorInherit-110.MuiTypography-noWrap-107.Dashboard-title-8 {
     margin-right: -70px;
+  }
+  .Dashboard-toolbarIcon-3 {
+    min-height: 73px;
+    margin-bottom: 4px;
+    margin-top: 5px;
   }
 }

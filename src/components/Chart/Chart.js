@@ -10,37 +10,37 @@ export default class DashIncome extends Component {
         {
           label: 'Nodejs',
           data: ['80'],
-          backgroundColor: ['rgba(189, 223, 255)'],
+          backgroundColor: ['rgba(25, 252, 86, 0.9)'],
           borderWidth: 2
         },
         {
           label: 'JavaScript',
           data: ['80'],
-          backgroundColor: ['rgba(0, 150, 245)'],
+          backgroundColor: ['rgba(255, 252, 86, 0.9)'],
           borderWidth: 2
         },
         {
           label: 'css',
           data: ['60'],
-          backgroundColor: ['rgba(255, 9, 131, 1)'],
+          backgroundColor: ['rgba(255, 9, 131, 0.9)'],
           borderWidth: 2
         },
         {
           label: 'Html',
           data: ['50'],
-          backgroundColor: ['rgba(255, 2, 86, 1)'],
+          backgroundColor: ['rgba(255, 2, 86, 0.9)'],
           borderWidth: 2
         },
         {
           label: 'React',
           data: ['60'],
-          backgroundColor: ['rgba(153, 102, 255, 1)'],
+          backgroundColor: ['rgba(153, 102, 255, 0.9)'],
           borderWidth: 2
         },
         {
           label: 'Material',
           data: ['70'],
-          backgroundColor: ['rgba(255, 159, 64, 1)'],
+          backgroundColor: ['rgba(255, 159, 64, 0.9)'],
           borderWidth: 2
         }
       ]

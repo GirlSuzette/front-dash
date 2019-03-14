@@ -7,9 +7,9 @@ import YAxis from 'recharts/lib/cartesian/YAxis'
 import Tooltip from 'recharts/lib/component/Tooltip'
 import Legend from 'recharts/lib/component/Legend'
 import Typography from '@material-ui/core/Typography'
-import './lineChart.css'
-import { CartesianGrid } from 'recharts'
 import Chart from '../Chart/Chart'
+import { CartesianGrid } from 'recharts'
+import './lineChart.css'
 
 const data = [
   { name: 'Nodejs', Porcentaje: 80 },

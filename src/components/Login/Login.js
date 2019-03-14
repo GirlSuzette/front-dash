@@ -1,13 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import './login.css'
-import { Link } from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Avatar from '@material-ui/core/Avatar'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import './login.css'
 
 const styles = theme => ({
   avatar: {
@@ -24,56 +24,6 @@ const styles = theme => ({
 })
 
 class Login extends React.Component {
-  state = {
-    error: {
-      status: false,
-      message: ''
-    }
-  }
-  handleLogIn = () => {
-    const { history } = this.props
-
-    localStorage.removeItem('token')
-    history.push('/')
-  }
-
-  onSubmit = e => {
-    e.preventDefault()
-
-    const API_URL = 'https://cryptic-retreat-15738.herokuapp.com/api/v1/'
-
-    fetch(`${API_URL}/auth/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: e.target.email.value,
-        password: e.target.password.value
-      })
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (typeof data.token !== 'undefined') {
-          localStorage.setItem('token', data.token)
-          const url = window.decodeURIComponent(this.props.location.search)
-          console.log(url)
-          if (url !== '') {
-            this.props.history.push('/' + url.split('/')[1] || '/')
-          } else {
-            this.props.history.push('/')
-          }
-        } else {
-          this.setState({
-            error: {
-              status: true,
-              message: data.message
-            }
-          })
-        }
-      })
-      .catch(e => alert(e))
-  }
   render () {
     const { classes } = this.props
 
@@ -92,7 +42,7 @@ class Login extends React.Component {
                       Sign in
                     </Typography>
                   </div>
-                  <form onSubmit={this.onSubmit}>
+                  <form>
                     <div className='form-group'>
                       <TextField
                         required
@@ -110,16 +60,8 @@ class Login extends React.Component {
                         fullWidth
                       />
                     </div>
-                    {this.state.error.status && (
-                      <p>{this.state.error.message}</p>
-                    )}
                     <div className='form-group btn'>
-                      <Button
-                        type='submit'
-                        value='Login'
-                        variant='contained'
-                        onClick={this.handleLogout}
-                      >
+                      <Button type='submit' value='Login' variant='contained'>
                         Login
                       </Button>
                     </div>
@@ -146,5 +88,3 @@ Login.propTypes = {
   classes: PropTypes.object.isRequired
 }
 export default withStyles(styles)(Login)
-
-// export default Login
