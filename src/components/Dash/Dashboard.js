@@ -223,7 +223,6 @@ class Dashboard extends React.Component {
                 <SearchIcon />
               </div>
             </Typography>
-            <Avatar />
             <IconButton color='inherit'>
               <div className='noneSearch'>
                 <div className={classes.search}>
@@ -239,6 +238,7 @@ class Dashboard extends React.Component {
                   />
                 </div>
               </div>
+              <Avatar />
             </IconButton>
           </Toolbar>
         </AppBar>

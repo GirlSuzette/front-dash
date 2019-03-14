@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
 import Grid from '@material-ui/core/Grid'
 import img from '../../image/suzette.jpg'
+import '../Dash/Dash.css'
 
 const styles = {
   avatar: {
@@ -19,9 +20,8 @@ const styles = {
 function ImageAvatars (props) {
   const { classes } = props
   return (
-    <Grid container justify='center' alignItems='center'>
+    <Grid container justify='end' alignItems=''>
       <Avatar alt='Remy Sharp' src={img} className={classes.avatar} />
-      {/* <Avatar alt='Remy Sharp' src={img} className={classes.bigAvatar} /> */}
     </Grid>
   )
 }
