@@ -8,4 +8,9 @@
   .swiper-container.swiper-container-horizontal {
     height: 382px;
   }
+  .contHome {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 90px;
+  }
 }
